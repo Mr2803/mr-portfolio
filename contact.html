@@ -69,9 +69,9 @@
             </div>
             <form id="my-form" action="https://formspree.io/xknbagyo" method="POST">
                 <label>Email:</label>
-                <input type="email" name="email" />
+                <input required type="email" name="email" id="email"/>
                 <label>Message:</label>
-                <input type="text" name="message" />
+                <input required type="text" name="message" id="body" />
                 <button id="my-form-button">Submit</button>
                 <p id="my-form-status"></p>
             </form>
@@ -95,16 +95,20 @@
         var status = document.getElementById("my-form-status");
 
         // Success and Error functions for after the form is submitted
+        if($("#email") !== null && $("#body") !== null){
 
-        function success() {
-            form.reset();
-            button.style = "display: none ";
-            status.innerHTML = "Thanks!";
+            function success() {
+                form.reset();
+                button.style = "display: none ";
+                status.innerHTML = "Thanks!";
+            }
+        }else{
+
+            function error() {
+                status.innerHTML = "Oops! There was a problem.";
+            }
         }
 
-        function error() {
-            status.innerHTML = "Oops! There was a problem.";
-        }
 
         // handle the form submission event
 
