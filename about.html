@@ -97,11 +97,9 @@
             </div>
 
             <div class="job job-3">
-                <h3>Webworks</h3>
-                <h6>Graphic Designer</h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt
-                    porro dolores
-                    expedita dolor necessitatibus deserunt nemo.</p>
+                <h3>Skills</h3>
+                <h6>Code Language</h6>
+                <p><canvas id="myChart"></canvas></p>
             </div>
         </div>
     </main>
@@ -109,8 +107,64 @@
     <footer id="main-footer">
         Copyright &copy; 2020
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: ["HTML","CSS","JAVASCRIPT","JQUERY","VUE.JS","PHP","MySQL","LARAVEL"],
+                    datasets: [{
+                        label: 'Skills',
+                        data: [93, 95, 80, 83, 77, 80, 80, 87],
+                        backgroundColor: [
+                            "#d58300",
+                            "#e38e00",
+                            "#f19900",
+                            "#ffa500",
+                            "#ffb11b",
+                            "#ffbd2c",
+                            "#ffc93b",
+                            "#ffd93b"
+                        ],
+                        /* borderColor: [
+
+                            'rgba(255, 159, 64, 1)'
+                            
+                        ], */
+
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    legend: {
+                        display:false,
+                        labels: {
+                            fontColor: 'white',
+                            fontSize: 15,
+                            fontStyle: "bold"
+                        }
+                    },
+
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "white"
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                fontColor: "white"
+                            }
+                        }],
+                    }
+                }
+            });
+    </script>
 </body>
 
 </html>
