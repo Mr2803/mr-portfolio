@@ -10,6 +10,7 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+  
 }
 
 // Tablets & Small Laptops
@@ -53,6 +54,8 @@
   }
 
   .about-info {
+    justify-items: center;
+    align-items: center;
     grid-template-areas:
       'bioimage'
       'bio'
@@ -61,6 +64,10 @@
       'job3';
 
     grid-template-columns: 1fr;
+
+    .job{
+      width:100%;
+    }
   }
 
   .projects {
