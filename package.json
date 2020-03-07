@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Marco Rispoli responsive portfolio",
   "main": "index.js",
+  "homepage": "https://mr2803.github.io/mr-portfolio",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Marco Rispoli",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1"
   }
 }
