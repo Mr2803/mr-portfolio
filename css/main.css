@@ -294,5 +294,7 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
+  #contact .boxes div {
+    font-size: 1.2rem; }
   .projects {
     grid-template-columns: 1fr; } }
