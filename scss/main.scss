@@ -24,6 +24,7 @@ h3 {
 
   &.lg-heading {
     font-size: 6rem;
+    
   }
 
   &.sm-heading {
@@ -31,6 +32,11 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
+}
+
+h2.sm-heading{
+  background:none;
+  padding:0;
 }
 
 a {
