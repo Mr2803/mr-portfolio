@@ -208,4 +208,15 @@ main {
   height: 60px;
 }
 
+#map {
+        width: 100%;
+        height: 50vh;
+        text-align: initial;
+        /* .mapboxgl-canvas{
+          position: inherit !important;
+        } */
+    }
+.tomtomAttribution{
+  display:none;
+}
 @import 'mobile';

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <title>Contact Me</title>
 </head>
@@ -52,42 +52,93 @@
     <main id="contact">
         <h1 class="lg-heading">
             Contact
-            <span class="text-secondary">Me</span>
+            <span class="text-secondary" style="color:#ee801a !important">Me</span>
         </h1>
         <h2 class="sm-heading">
             Puoi contattarmi...
         </h2>
-        <div class="boxes">
-            <div>
-                <span class="text-secondary">Email: </span><span>rispoli.mar2803@gmail.com</span> 
+        <!--Section: Contact v.2-->
+        <section class="mb-4">
+        
+            <div class="row">
+        
+                <!--Grid column-->
+                <div class="col-md-9 mb-md-0 mb-5">
+                    <form id="my-form" action="https://formspree.io/xknbagyo" method="POST">
+        
+                        <!--Grid row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email *">
+                                    <label for="email">Your email</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+        
+                                <div class="md-form">
+                                    <textarea placeholder="Messaggio *" type="text" id="body" name="message" rows="2"
+                                        class="form-control md-textarea"></textarea>
+                                    <label for="message">Your message</label>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                        <div class="text-center text-md-center">
+                            <button class="btn btn-primary" id="my-form-button">Invia</button>
+                            <p id="my-form-status"></p>
+                        </div>
+                        
+                    </form>
+        
+                </div>
+                <!--Grid column-->
+        
+                <!--Grid column-->
+                
+                <!--Grid column-->
+        
             </div>
-            <div>
-                <span class="text-secondary">Phone: </span> test
+            
+                
+            
+        </section>
+        <div class="col-12">
+        
+        
+            <div id='map' class='map' style="position:relative;">
+        
             </div>
-            <div>
-                <span class="text-secondary">Address: </span> test
-            </div>
-            <form id="my-form" action="https://formspree.io/xknbagyo" method="POST">
-                <label>Email:</label>
-                <input required type="email" name="email" id="email"/>
-                <label>Message:</label>
-                <input required type="text" name="message" id="body" />
-                <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
-            </form>
+        
         </div>
-
     </main>
 
     <footer id="main-footer">
         Copyright &copy; 2020
     </footer>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.45.0/maps/maps-web.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
 <script>
-    window.addEventListener("DOMContentLoaded", function () {
 
+    var myCoord = [14.9683642, 40.6155327]
+    var map = tt.map({
+            key: 'PXlXaqWPf4QFvdznBmvVfmi3AMAscNRm',
+            container: 'map',
+            style: 'tomtom://vector/1/basic-main',
+            center: myCoord,
+            zoom: 8
+        });
+    var marker = new tt.Marker().setLngLat(myCoord).addTo(map);
+
+    
+    window.addEventListener("DOMContentLoaded", function () {
+        
         // get the form elements defined in your form HTML above
 
         var form = document.getElementById("my-form");
@@ -95,7 +146,7 @@
         var status = document.getElementById("my-form-status");
 
         // Success and Error functions for after the form is submitted
-        if($("#email") !== null && $("#body") !== null){
+        /* if($("#email").val() !== null && $("#body").val() !== null){
 
             function success() {
                 form.reset();
@@ -108,20 +159,37 @@
                 status.innerHTML = "Oops! There was a problem.";
             }
         }
-
+ */
 
         // handle the form submission event
-
+        
         form.addEventListener("submit", function (ev) {
             ev.preventDefault();
+            if ($("#email").val() !== "" && $("#body").val() !== "") {
+             function success() {
+                form.reset();
+                button.style = "display: none ";
+                status.innerHTML = "Thanks!";
+                
+            }}
+            else{
+                if($("#body").val() == ""){
+                    status.innerHTML = "Non puoi lasciare il campo body vuoto";
+                }
+                function error() {
+                    status.innerHTML = "Oops! There was a problem.";
+                }
+            }
             var data = new FormData(form);
             ajax(form.method, form.action, data, success, error);
+            
         });
     });
-
+    
     // helper function for sending an AJAX request
 
     function ajax(method, url, data, success, error) {
+        
         var xhr = new XMLHttpRequest();
         xhr.open(method, url);
         xhr.setRequestHeader("Accept", "application/json");

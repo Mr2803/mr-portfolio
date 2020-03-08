@@ -242,6 +242,17 @@ main {
   color: #fff;
   height: 60px; }
 
+#map {
+  width: 100%;
+  height: 50vh;
+  text-align: initial;
+  /* .mapboxgl-canvas{
+          position: inherit !important;
+        } */ }
+
+.tomtomAttribution {
+  display: none; }
+
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
