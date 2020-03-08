@@ -63,62 +63,69 @@
             <div class="row">
         
                 <!--Grid column-->
-                <div class="col-md-9 mb-md-0 mb-5">
+                <div class="col-md-6 mb-md-0 mb-5">
                     <form id="my-form" action="https://formspree.io/xknbagyo" method="POST">
         
                         <!--Grid row-->
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12 mb-3">
                                 <div class="md-form mb-0">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email *">
-                                    <label for="email">Your email</label>
+                                    <label for="email">Inserisci la tua email</label>
+                                    <input required type="email" id="email" name="email" class="form-control" placeholder="Email *">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 mb-3">
         
                                 <div class="md-form">
-                                    <textarea placeholder="Messaggio *" type="text" id="body" name="message" rows="2"
+                                    <label for="body">Scrivi il tuo messaggio</label>
+                                    <textarea required placeholder="Messaggio *" type="text" id="body" name="message" rows="2"
                                         class="form-control md-textarea"></textarea>
-                                    <label for="message">Your message</label>
                                 </div>
         
                             </div>
                         </div>
         
                         <div class="text-center text-md-center">
-                            <button class="btn btn-primary" id="my-form-button">Invia</button>
-                            <p id="my-form-status"></p>
+                            <button class="btn btn-primary" id="my-form-button" style="background:rgb(156, 105, 9)">Invia</button>
+                            <div id="my-form-status"></div>
                         </div>
                         
                     </form>
         
                 </div>
-                <!--Grid column-->
-        
-                <!--Grid column-->
-                
-                <!--Grid column-->
+                <div class="col-md-6 ">
+                    
+                    
+                    
+                        <div id='map' class='map' style="position:relative;">
+                    
+                        
+                    
+                    </div>
+                </div>
         
             </div>
             
                 
             
         </section>
-        <div class="col-12">
+        <!-- <div class="col-12" style="padding:0;">
         
         
             <div id='map' class='map' style="position:relative;">
         
             </div>
         
-        </div>
+        </div> -->
     </main>
 
     <footer id="main-footer">
         Copyright &copy; 2020
+        
+        
     </footer>
     <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.45.0/maps/maps-web.min.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -169,13 +176,17 @@
              function success() {
                 form.reset();
                 button.style = "display: none ";
-                status.innerHTML = "Thanks!";
+                status.innerHTML = "Messaggio Inviato correttamente!";
                 
-            }}
-            else{
+            }} else if(($("#body").val() == "") || ($("#email").val() == "")){
                 if($("#body").val() == ""){
                     status.innerHTML = "Non puoi lasciare il campo body vuoto";
                 }
+                if($("#email").val() == ""){
+                    status.innerHTML = "Non puoi lasciare il campo email vuoto";
+                }
+                
+            } else{
                 function error() {
                     status.innerHTML = "Oops! There was a problem.";
                 }
