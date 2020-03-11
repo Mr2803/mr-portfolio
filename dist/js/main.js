@@ -43,8 +43,14 @@ function init(){
     })
 
     printGraph();
+    
+    
 
 }
+
+//typed js 
+
+
 
 function printGraph(){
     var ctx = document.getElementById('myChart').getContext('2d');

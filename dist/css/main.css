@@ -240,11 +240,15 @@ main {
   color: #333; }
 
 #main-footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
+  #main-footer a {
+    margin-right: 10px; }
 
 #map {
   width: 100%;
@@ -256,6 +260,9 @@ main {
 
 .tomtomAttribution {
   display: none; }
+
+canvas {
+  background-image: radial-gradient(#666, #333); }
 
 @media screen and (min-width: 1171px) {
   .projects {
