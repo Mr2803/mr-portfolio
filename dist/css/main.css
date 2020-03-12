@@ -113,11 +113,9 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(68, 68, 68, 0.8); }
-
-.particles-js-canvas-el {
-  position: absolute;
-  top: 0;
-  background: none !important; }
+  body .particles-js-canvas-el {
+    position: absolute;
+    top: 0; }
 
 h1,
 h2,
