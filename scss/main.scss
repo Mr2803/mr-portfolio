@@ -13,7 +13,17 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+
+  .particles-js-canvas-el{
+    position:absolute;
+    top:0;
+  }
+
+  
 }
+
+
+
 
 // Headings
 h1,
