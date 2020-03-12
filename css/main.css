@@ -114,6 +114,11 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.8); }
 
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  background: none !important; }
+
 h1,
 h2,
 h3 {
@@ -163,6 +168,7 @@ main {
     main .icons #github:hover {
       color: #9919d4; }
   main#home {
+    position: absolute;
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
