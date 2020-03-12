@@ -217,11 +217,16 @@ main {
 }
 
 #main-footer {
-  text-align: center;
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
   padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+  a{
+    margin-right:10px;
+  }
 }
 
 #map {
@@ -234,5 +239,11 @@ main {
     }
 .tomtomAttribution{
   display:none;
+}
+
+
+
+canvas {
+	background-image: radial-gradient(#666, #333);
 }
 @import 'mobile';
