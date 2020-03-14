@@ -228,6 +228,15 @@ main {
   a{
     margin-right:10px;
   }
+  .signature{
+    width:50%;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    img{
+      width:150px;
+    }
+  }
 }
 
 #map {
