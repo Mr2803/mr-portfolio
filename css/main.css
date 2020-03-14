@@ -253,6 +253,13 @@ main {
   height: 60px; }
   #main-footer a {
     margin-right: 10px; }
+  #main-footer .signature {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    #main-footer .signature img {
+      width: 150px; }
 
 #map {
   width: 100%;
