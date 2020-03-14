@@ -78,24 +78,29 @@ main {
 
       
     }
-    #instagram{
+    .instagram{
       &:hover{
         color:rgb(212, 53, 25);
       }
     }
-    #facebook{
+    .facebook{
       &:hover{
         color:#3b5998;
       }
     }
-    #linkedin{
+    .linkedin{
       &:hover{
         color:rgb(59, 108, 136);
       }
     }
-    #github{
+    .github{
       &:hover{
         color:rgb(153, 25, 212);
+      }
+    }
+    .skype{
+      &:hover{
+        color:#00aff0;
       }
     }
   }
