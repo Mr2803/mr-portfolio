@@ -44,8 +44,6 @@ function init(){
 
     printGraph();
     
-    
-
 }
 
 //typed js 
