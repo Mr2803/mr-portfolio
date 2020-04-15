@@ -98,7 +98,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/primary-bg.jpg);
@@ -116,6 +116,36 @@ body {
   body .particles-js-canvas-el {
     position: absolute;
     top: 0; }
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.language i {
+  margin: 3px;
+  font-size: 20px; }
+
+.language .fa-php {
+  color: #a661e7; }
+
+.language .fa-js-square {
+  color: yellow; }
+
+.language .fa-laravel {
+  color: #a12d2d; }
+
+.language .fa-html5 {
+  color: orangered; }
+
+.language .fa-sass {
+  color: fuchsia; }
+
+.language .fa-css3-alt {
+  color: #3b3bf0; }
+
+.language .fa-vuejs {
+  color: green; }
 
 h1,
 h2,
@@ -176,7 +206,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;

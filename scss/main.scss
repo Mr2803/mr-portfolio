@@ -1,5 +1,5 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 
 * {
   box-sizing: border-box;
@@ -11,19 +11,48 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 
- .particles-js-canvas-el{
-    position:absolute;
-    top:0;
-   }
-
-  
+  .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+  }
 }
 
- 
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.language {
+  i {
+    margin: 3px;
+    font-size: 20px;
+  }
+  .fa-php {
+    color: rgb(166, 97, 231);
+  }
+  .fa-js-square {
+    color: yellow;
+  }
+  .fa-laravel {
+    color: rgb(161, 45, 45);
+  }
+  .fa-html5 {
+    color: orangered;
+  }
+  .fa-sass {
+    color: fuchsia;
+  }
+  .fa-css3-alt {
+    color: rgb(59, 59, 240);
+  }
+  .fa-vuejs {
+    color: green;
+  }
+}
 
 // Headings
 h1,
@@ -34,7 +63,6 @@ h3 {
 
   &.lg-heading {
     font-size: 6rem;
-    
   }
 
   &.sm-heading {
@@ -44,9 +72,9 @@ h3 {
   }
 }
 
-h2.sm-heading{
-  background:none;
-  padding:0;
+h2.sm-heading {
+  background: none;
+  padding: 0;
 }
 
 a {
@@ -75,38 +103,36 @@ main {
     a {
       padding: 0.4rem;
       @include easeOut;
-
-      
     }
-    .instagram{
-      &:hover{
-        color:rgb(212, 53, 25);
+    .instagram {
+      &:hover {
+        color: rgb(212, 53, 25);
       }
     }
-    .facebook{
-      &:hover{
-        color:#3b5998;
+    .facebook {
+      &:hover {
+        color: #3b5998;
       }
     }
-    .linkedin{
-      &:hover{
-        color:rgb(59, 108, 136);
+    .linkedin {
+      &:hover {
+        color: rgb(59, 108, 136);
       }
     }
-    .github{
-      &:hover{
-        color:rgb(153, 25, 212);
+    .github {
+      &:hover {
+        color: rgb(153, 25, 212);
       }
     }
-    .skype{
-      &:hover{
-        color:#00aff0;
+    .skype {
+      &:hover {
+        color: #00aff0;
       }
     }
   }
 
   &#home {
-    position:absolute;
+    position: absolute;
     overflow: hidden;
     h1 {
       margin-top: 20vh;
@@ -115,12 +141,11 @@ main {
 }
 
 .about-info {
-  
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
+    "bioimage bio bio"
+    "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
@@ -223,42 +248,40 @@ main {
 }
 
 #main-footer {
-  display:flex;
+  display: flex;
   justify-content: space-around;
-  align-items:center;
+  align-items: center;
   padding: 1rem;
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
-  a{
-    margin-right:10px;
+  a {
+    margin-right: 10px;
   }
-  .signature{
-    width:50%;
-    display:flex;
+  .signature {
+    width: 50%;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
-    img{
-      width:150px;
+    img {
+      width: 150px;
     }
   }
 }
 
 #map {
-        width: 100%;
-        height: 50vh;
-        text-align: initial;
-        /* .mapboxgl-canvas{
+  width: 100%;
+  height: 50vh;
+  text-align: initial;
+  /* .mapboxgl-canvas{
           position: inherit !important;
         } */
-    }
-.tomtomAttribution{
-  display:none;
 }
-
-
+.tomtomAttribution {
+  display: none;
+}
 
 canvas {
-	background-image: radial-gradient(#666, #333);
+  background-image: radial-gradient(#666, #333);
 }
-@import 'mobile';
+@import "mobile";
