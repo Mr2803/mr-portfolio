@@ -1,118 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-170073987-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-170073987-1");
+    </script>
     <title>Contact Me</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
 
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait"></div>
-            </div>
-            <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        Ti parlo di me
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="work.html" class="nav-link">
-                        Progetti
-                    </a>
-                </li>
-                <li class="nav-item current">
-                    <a href="contact.html" class="nav-link">
-                        Contattami
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              Ti parlo di me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              Progetti
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="contact.html" class="nav-link">
+              Contattami
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main id="contact">
-        <h1 class="lg-heading">
-            Contatta<span style="color:#ee801a">mi</span>
-        </h1>
-        <h2 class="sm-heading">
-            Puoi contattarmi...
-        </h2>
-        <!--Section: Contact v.2-->
-        <section class="mb-4">
-        
-            <div class="row">
-        
-                <!--Grid column-->
-                <div class="col-md-6 mb-md-0 mb-5">
-                    <form id="my-form" action="https://formspree.io/xknbagyo" method="POST">
-        
-                        <!--Grid row-->
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-                                <div class="md-form mb-0">
-                                    <label for="email">Inserisci la tua email</label>
-                                    <input required type="email" id="email" name="email" class="form-control" placeholder="Email *">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-        
-                                <div class="md-form">
-                                    <label for="body">Scrivi il tuo messaggio</label>
-                                    <textarea required placeholder="Messaggio *" type="text" id="body" name="message" rows="2"
-                                        class="form-control md-textarea"></textarea>
-                                </div>
-        
-                            </div>
-                        </div>
-        
-                        <div class="text-center text-md-center">
-                            <button class="btn btn-primary" id="my-form-button" style="background:rgb(156, 105, 9)">Invia</button>
-                            <div id="my-form-status"></div>
-                        </div>
-                        
-                    </form>
-        
+      <h1 class="lg-heading">
+        Contatta<span style="color: #ee801a;">mi</span>
+      </h1>
+      <h2 class="sm-heading">
+        Puoi contattarmi...
+      </h2>
+      <!--Section: Contact v.2-->
+      <section class="mb-4">
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-6 mb-md-0 mb-5">
+            <form
+              id="my-form"
+              action="https://formspree.io/xknbagyo"
+              method="POST"
+            >
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <div class="md-form mb-0">
+                    <label for="email">Inserisci la tua email</label>
+                    <input
+                      required
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email *"
+                    />
+                  </div>
                 </div>
-                <div class="col-md-6 ">
-                    
-                    
-                    
-                        <div id='map' class='map' style="position:relative;">
-                    
-                        
-                    
-                    </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <div class="md-form">
+                    <label for="body">Scrivi il tuo messaggio</label>
+                    <textarea
+                      required
+                      placeholder="Messaggio *"
+                      type="text"
+                      id="body"
+                      name="message"
+                      rows="2"
+                      class="form-control md-textarea"
+                    ></textarea>
+                  </div>
                 </div>
-        
-            </div>
-            
-                
-            
-        </section>
-        <!-- <div class="col-12" style="padding:0;">
+              </div>
+
+              <div class="text-center text-md-center">
+                <button
+                  class="btn btn-primary"
+                  id="my-form-button"
+                  style="background: rgb(156, 105, 9);"
+                >
+                  Invia
+                </button>
+                <div id="my-form-status"></div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div id="map" class="map" style="position: relative;"></div>
+          </div>
+        </div>
+      </section>
+      <!-- <div class="col-12" style="padding:0;">
         
         
             <div id='map' class='map' style="position:relative;">
@@ -123,49 +151,60 @@
     </main>
 
     <footer id="main-footer">
-        <div>
-            <a href="https://www.instagram.com/marco_rispoli/" target="_blank" class="instagram">
-                <i class="fab fa-instagram "></i>
-            </a>
-            <a href="https://www.facebook.com/marco.rispoli91" target="_blank" class="facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rispoli-marco/" target="_blank" class="linkedin">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Mr2803" target="_blank" class="github">
-                <i class="fab fa-github "></i>
-            </a>
-            <a href="https://join.skype.com/invite/nshPwMp1zsUb" target="_blank" class="skype">
-                <i class="fab fa-skype "></i>
-            </a>
-            <span>&copy; 2020</span>
-        </div>
-        <div class="signature">
-    
-            <img src="img/firma_bianca.png" alt="">
-    
-        </div>
+      <div>
+        <a
+          href="https://www.instagram.com/marco_rispoli/"
+          target="_blank"
+          class="instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/marco.rispoli91"
+          target="_blank"
+          class="facebook"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rispoli-marco/"
+          target="_blank"
+          class="linkedin"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Mr2803" target="_blank" class="github">
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://join.skype.com/invite/nshPwMp1zsUb"
+          target="_blank"
+          class="skype"
+        >
+          <i class="fab fa-skype"></i>
+        </a>
+        <span>&copy; 2020</span>
+      </div>
+      <div class="signature">
+        <img src="img/firma_bianca.png" alt="" />
+      </div>
     </footer>
-    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.45.0/maps/maps-web.min.js"> </script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.45.0/maps/maps-web.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 
-<script>
+    <script>
+      var myCoord = [14.9683642, 40.6155327];
+      var map = tt.map({
+        key: "PXlXaqWPf4QFvdznBmvVfmi3AMAscNRm",
+        container: "map",
+        style: "tomtom://vector/1/basic-main",
+        center: myCoord,
+        zoom: 8,
+      });
+      var marker = new tt.Marker().setLngLat(myCoord).addTo(map);
 
-    var myCoord = [14.9683642, 40.6155327]
-    var map = tt.map({
-            key: 'PXlXaqWPf4QFvdznBmvVfmi3AMAscNRm',
-            container: 'map',
-            style: 'tomtom://vector/1/basic-main',
-            center: myCoord,
-            zoom: 8
-        });
-    var marker = new tt.Marker().setLngLat(myCoord).addTo(map);
-
-    
-    window.addEventListener("DOMContentLoaded", function () {
-        
+      window.addEventListener("DOMContentLoaded", function () {
         // get the form elements defined in your form HTML above
 
         var form = document.getElementById("my-form");
@@ -189,52 +228,48 @@
  */
 
         // handle the form submission event
-        
-        form.addEventListener("submit", function (ev) {
-            ev.preventDefault();
-            if ($("#email").val() !== "" && $("#body").val() !== "") {
-             function success() {
-                form.reset();
-                button.style = "display: none ";
-                status.innerHTML = "Messaggio Inviato correttamente!";
-                
-            }} else if(($("#body").val() == "") || ($("#email").val() == "")){
-                if($("#body").val() == ""){
-                    status.innerHTML = "Non puoi lasciare il campo body vuoto";
-                }
-                if($("#email").val() == ""){
-                    status.innerHTML = "Non puoi lasciare il campo email vuoto";
-                }
-                
-            } else{
-                function error() {
-                    status.innerHTML = "Oops! There was a problem.";
-                }
-            }
-            var data = new FormData(form);
-            ajax(form.method, form.action, data, success, error);
-            
-        });
-    });
-    
-    // helper function for sending an AJAX request
 
-    function ajax(method, url, data, success, error) {
-        
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          if ($("#email").val() !== "" && $("#body").val() !== "") {
+            function success() {
+              form.reset();
+              button.style = "display: none ";
+              status.innerHTML = "Messaggio Inviato correttamente!";
+            }
+          } else if ($("#body").val() == "" || $("#email").val() == "") {
+            if ($("#body").val() == "") {
+              status.innerHTML = "Non puoi lasciare il campo body vuoto";
+            }
+            if ($("#email").val() == "") {
+              status.innerHTML = "Non puoi lasciare il campo email vuoto";
+            }
+          } else {
+            function error() {
+              status.innerHTML = "Oops! There was a problem.";
+            }
+          }
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+      });
+
+      // helper function for sending an AJAX request
+
+      function ajax(method, url, data, success, error) {
         var xhr = new XMLHttpRequest();
         xhr.open(method, url);
         xhr.setRequestHeader("Accept", "application/json");
         xhr.onreadystatechange = function () {
-            if (xhr.readyState !== XMLHttpRequest.DONE) return;
-            if (xhr.status === 200) {
-                success(xhr.response, xhr.responseType);
-            } else {
-                error(xhr.status, xhr.response, xhr.responseType);
-            }
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
         };
         xhr.send(data);
-    }
-</script>
-</body>
-
+      }
+    </script>
+  </body>
 </html>
