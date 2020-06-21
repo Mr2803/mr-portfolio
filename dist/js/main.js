@@ -1,6 +1,12 @@
 function init() {
-  // Select DOM Items
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
+  gtag("config", "UA-170073987-1");
+  // Select DOM Items
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
   const menuNav = document.querySelector(".menu-nav");
