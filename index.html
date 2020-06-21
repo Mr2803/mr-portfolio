@@ -117,13 +117,41 @@
         </a>
       </div>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+      window.cookieconsent.initialise({
+        container: document.getElementById("cookieconsent"),
+        palette: {
+          popup: { background: "#1aa3ff" },
+          button: { background: "#e0e0e0" },
+        },
+        revokable: true,
+        onStatusChange: function (status) {
+          console.log(
+            this.hasConsented() ? "enable cookies" : "disable cookies"
+          );
+        },
+        theme: "edgeless",
+        domain: "https://mr2803.github.io/mr-portfolio/",
+        secure: true,
+        content: {
+          header: "Cookies used on the website!",
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          href: "https://www.cookiesandyou.com",
+          close: "&#x274c;",
+          policy: "Cookie Policy",
+          target: "_blank",
+        },
+      });
       var typed = new Typed(".typed", {
         strings: [
           'Junior Full Stack <span style="color:#ee801a">Web Developer</span>',
