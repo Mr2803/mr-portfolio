@@ -1,4 +1,92 @@
 function init() {
+  console.log(window.location.pathname);
+  if (
+    window.location.pathname == "/mr-portfolio/about.html" ||
+    window.location.pathname == "/dist/about.html"
+  ) {
+    class Defilee {
+      constructor(element) {
+        if (!element) {
+          return;
+        }
+        this.element = element;
+        this._name = "defilee";
+        this._itemSelector = "." + this._itemClass;
+      }
+      init() {
+        this.addLoop();
+      }
+      addLoop() {
+        const parent = this.element;
+        Array.prototype.slice
+          .call(this.element.children)
+          .reverse()
+          .forEach((el) => {
+            const clone = el.cloneNode(true);
+            clone.classList.add("clone");
+            parent.insertBefore(clone, parent.firstChild);
+          });
+      }
+    }
+
+    const defilee = new Defilee(document.getElementById("defilee"));
+    defilee.init();
+    callingFn();
+    printGraph();
+  }
+
+  async function callingFn() {
+    try {
+      const response = await fetch(
+        //   "https://api.github.com/users/Mr2803/repos",
+        "https://v1.nocodeapi.com/mr2803/instagram/sdXWhfbqqpGhUpPJ?limit=12",
+        {
+          method: "get",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      var json = await response.json();
+      console.log(json);
+
+      var personal_class = [
+        "defilee__div--special2",
+        "defilee__div--special",
+        "defilee__div--special1",
+        "defilee__div--special2",
+        "defilee__div--special4",
+        "defilee__div--special1",
+        "defilee__div--special3",
+        "defilee__div--special4",
+        "defilee__div--special1",
+        "defilee__div--special2",
+        "defilee__div--special1",
+        "defilee__div--special",
+      ];
+      for (let index = 0; index < json.data.length; index++) {
+        json.data[index].class = personal_class[index];
+      }
+      console.log(json);
+      json.data.map((value) => {
+        console.log(value);
+        if (value.caption == undefined) value.caption = "#Instagram";
+        var template = document.createRange()
+          .createContextualFragment(`<div class="defilee__div ${value.class}">
+          <img
+            src="${value.media_url}"
+            alt="Avatar for user 1"
+          />
+          <p style="color:black">${value.caption}</p>
+        </div>`);
+        var src = document.getElementById("defilee");
+        src.appendChild(template);
+      });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
   // Select DOM Items
   const menuBtn = document.querySelector(".menu-btn");
   const menu = document.querySelector(".menu");
@@ -43,8 +131,6 @@ function init() {
   ).mouseleave(function () {
     $(this).removeClass("fa-spin");
   });
-
-  printGraph();
 }
 
 //typed js
