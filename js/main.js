@@ -9,15 +9,15 @@ function init() {
         if (!element) {
           return;
         }
+        console.log("sono un element" + element);
         this.element = element;
         this._name = "defilee";
         this._itemSelector = "." + this._itemClass;
       }
-      init() {
-        this.addLoop();
-      }
+
       addLoop() {
         const parent = this.element;
+
         Array.prototype.slice
           .call(this.element.children)
           .reverse()
@@ -30,7 +30,8 @@ function init() {
     }
 
     const defilee = new Defilee(document.getElementById("defilee"));
-    defilee.init();
+    console.log(defilee);
+    defilee.addLoop();
     callingFn();
     printGraph();
   }
