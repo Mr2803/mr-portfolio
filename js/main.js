@@ -1,4 +1,11 @@
+import variables from "../../scss/_config.scss";
+
+console.log(variables.secondaryColor);
+
 function init() {
+  document
+    .querySelector("body")
+    .style.setProperty("--secondary-color", "#35682d");
   console.log(window.location.pathname);
   if (
     window.location.pathname == "/mr-portfolio/about.html" ||
