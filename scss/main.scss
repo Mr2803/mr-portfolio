@@ -253,7 +253,7 @@ main {
   grid-template-areas:
     "defilee__outer defilee__outer defilee__outer defilee__outer"
     "bio bio bio bio"
-    "job4 job1 job2 job3";
+    "job4 job1 job2 job3 ";
   grid-template-columns: repeat(4, 1fr);
 
   .bio-image {
