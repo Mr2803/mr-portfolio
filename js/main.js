@@ -1,6 +1,6 @@
-import variables from "../../scss/_config.scss";
+// import variables from "../../scss/_config.scss";
 
-console.log(variables.secondaryColor);
+// console.log(variables.secondaryColor);
 
 function init() {
   document
