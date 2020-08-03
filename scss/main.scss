@@ -1,6 +1,6 @@
 @import "config";
 @import "menu";
-
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -17,6 +17,114 @@ body {
   .particles-js-canvas-el {
     position: absolute;
     top: 0;
+  }
+}
+
+p {
+  margin: 0;
+  text-align: center;
+  font-size: calc(0.5rem + 0.5vw);
+}
+
+.defilee__main {
+  margin: 0 auto;
+}
+
+.defilee__outer {
+  grid-area: defilee__outer;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  perspective: 0.5px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+#blablbla {
+  font-family: "Special Elite", cursive;
+  margin: 0;
+  font-size: calc(7vw + 20px);
+  position: absolute;
+  left: 5%;
+  bottom: 40%;
+  color: $secondary-color;
+}
+.defilee__ctnr {
+  transform-style: preserve-3d;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.defilee__div {
+  position: relative;
+  transform: translateZ(-0.1px) scale(1.4) translateX(30px) translateY(5vh);
+  img {
+    width: 100%;
+    margin-bottom: 0.75vw;
+    // filter: sepia(100%) hue-rotate(180deg);
+  }
+  // &:nth-child(3n + 1) > img {
+  //   filter: none;
+  // }
+}
+
+.defilee__div:not(.defilee__div--text) {
+  width: 25vw;
+  margin: 0 5vw;
+  background: white;
+  padding: 0.75vw;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 1);
+}
+.defilee__div--text {
+  margin: 0 0 0 10vw;
+  transform: translateZ(-0.25px) scale(1.4) translateX(60px) translateY(-5vh);
+  animation: zoom infinite 1s;
+}
+
+.defilee__div--special {
+  transform: translateZ(-0.2px) scale(1.4) translateX(30px) translateY(20vh);
+}
+.defilee__div--special1 {
+  transform: translateZ(-0.25px) scale(1.4) translateX(-0.3vw) translateY(0);
+}
+
+.defilee__div--special2 {
+  transform: translateZ(-0.3px) scale(1.5) translateX(-0.5vw) translateY(-5vh);
+}
+.defilee__div--special3 {
+  transform: translateZ(-0.5px) scale(1.5) translateX(-30px) translateY(-30vh);
+}
+.defilee__div--special4 {
+  transform: translateZ(-0.65px) scale(3) translateX(30px) translateY(-10vh);
+}
+.defilee__ctnr {
+  transform: translate3d(-10%, 0, 0);
+  will-change: transform;
+  animation: slide 25s 0.7s linear infinite;
+}
+@keyframes slide {
+  100% {
+    transform: translate3d(-60%, 0, 0);
+  }
+}
+.defilee__div--special1.first {
+  animation: vertical infinite 5s -2s;
+}
+@keyframes vertical {
+  50% {
+    transform: translateZ(-0.25px) scale(1.6) translateX(-0.3vw)
+      translateY(-5vh);
+  }
+}
+
+@keyframes zoom {
+  50% {
+    transform: translateZ(-0.25px) scale(1.5) translateX(60px) translateY(-5vh);
   }
 }
 
@@ -60,7 +168,6 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
-
   &.lg-heading {
     font-size: 6rem;
   }
@@ -144,7 +251,8 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
+    "defilee__outer defilee__outer defilee__outer"
+    "bio bio bio"
     "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
@@ -156,6 +264,7 @@ main {
   }
 
   .bio {
+    text-align: center;
     grid-area: bio;
     font-size: 1.5rem;
   }
@@ -270,6 +379,7 @@ main {
 }
 
 #map {
+  overflow: hidden;
   width: 100%;
   height: 50vh;
   text-align: initial;
