@@ -1,6 +1,9 @@
 function init() {
   console.log(window.location.pathname);
-  if (window.location.pathname == "/dist/about.html") {
+  if (
+    window.location.pathname == "/mr-portfolio/about.html" ||
+    window.location.pathname == "/dist/about.html"
+  ) {
     class Defilee {
       constructor(element) {
         if (!element) {
