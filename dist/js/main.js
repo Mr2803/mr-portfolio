@@ -52,18 +52,18 @@ function init() {
       console.log(json);
 
       var personal_class = [
-        "defilee__div--special2",
-        "defilee__div--special",
         "defilee__div--special1",
         "defilee__div--special2",
-        "defilee__div--special4",
-        "defilee__div--special1",
         "defilee__div--special3",
         "defilee__div--special4",
         "defilee__div--special1",
         "defilee__div--special2",
+        "defilee__div--special3",
+        "defilee__div--special4",
         "defilee__div--special1",
-        "defilee__div--special",
+        "defilee__div--special2",
+        "defilee__div--special3",
+        "defilee__div--special4",
       ];
       for (let index = 0; index < json.data.length; index++) {
         json.data[index].class = personal_class[index];
